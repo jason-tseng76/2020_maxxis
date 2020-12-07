@@ -1,0 +1,305 @@
+html, body
+  padding 0
+  margin 0
+  position relative
+  font-family 'Microsoft JhengHei', 'Noto Sans TC', Arial, sans-serif
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+#root
+  display: none
+  width 100%
+  position relative
+  margin 0 auto
+  overflow hidden
+
+nav
+  width 100vw
+  height 80px
+  background-color #1b1b1b
+  .logo
+    display block
+    margin-top 22px
+    float left
+    margin-left 11.9%
+  .nav-links
+    float right
+    margin-right 11.9%
+    .nav-link
+      text-decoration none
+      color #fff
+      font-size 18px
+      display inline-block
+      line-height 80px
+      padding 0 20px
+      margin 0 5px
+      cursor pointer
+      &:hover
+      &.active
+        color #ffd710
+  @media (max-width:1024px) and (min-width:801px)
+    .logo
+      margin-left 20px
+    .nav-links
+      margin-right 20px
+  @media (max-width:800px)
+    // height 100px
+    height auto
+    padding-top 25px
+    padding-bottom 10px
+    .logo
+      width 170px
+      margin 0 auto
+      float none
+      img
+        width 100%
+    .nav-links
+      float none
+      margin 15px auto
+      text-align center
+      .nav-link
+        font-size 16px
+        height 20px
+        line-height 20px
+        padding 0 7px
+
+.page
+  display none
+.kv
+  background-color #f4c100
+  .kv-image
+    width 1680px
+    height 592px
+    background-image url('~images/kv.png')
+    position relative
+    left 50%
+    margin-left -840px
+    &.timing
+      height 250px
+      background-image url('~images/kv_timing.png')
+    @media (min-width:991px) and (max-width:1280px)
+      width 1280px
+      height 451px
+      margin-left -640px
+      background-size 1280px 451px
+      &.timing
+        height 190px
+        background-size 1280px 190px
+    @media (min-width:769px) and (max-width:990px)
+      width 990px
+      height 349px
+      margin-left -495px
+      background-size 990px 349px
+      &.timing
+        height 147px
+        background-size 990px 147px
+    @media (min-width:376px) and (max-width:768px)
+      width 100%
+      height auto
+      background-image url('~images/kv_pad.png')
+      padding-bottom 90.3645%
+      left 0
+      margin-left 0
+      background-size contain
+      background-repeat no-repeat
+      &.timing
+        height auto
+        padding-bottom 22.91666666%
+        background-image url('~images/kv_timing_pad.png')
+    @media (max-width:375px)
+      width 100%
+      height auto
+      background-image url('~images/kv_m.png')
+      padding-bottom 142.666667%
+      left 0
+      margin-left 0
+      background-size contain
+      background-repeat no-repeat
+      &.timing
+        height auto
+        padding-bottom 33.866666666%
+        background-image url('~images/kv_timing_m.png')
+
+.caption
+  text-align center
+  .text
+    font-size 36px
+    @media (max-width:768px)
+      font-size 28px
+  .under_score
+    width 90px
+    height 5px
+    margin 10px auto
+    background-color #ffd710
+
+.sec-banner
+  position relative
+  width 1960px
+  left 50%
+  margin-left -960px
+  .caption
+    // padding-top 215px
+    padding-top 80px
+    padding-bottom 60px
+  &.sec-1
+    height 344px
+    background-image url('~images/sec_1_banner.png')
+  &.sec-2
+    height 344px
+    margin-top 15px
+    background-image url('~images/sec_2_banner.png')
+  @media (min-width:769) and (max-width:1280px)
+    &.sec-1
+    &.sec-2
+      width 1280px
+      height 225px
+      background-size 1280px 225px
+      margin-left -640px
+  @media (max-width:768px)
+    .caption
+      display: none
+    &.sec-1
+    &.sec-2
+      width 100%
+      background-size contain
+      background-repeat no-repeat
+      margin-left 0
+      height auto
+      left 0
+      &.sec-1
+        padding-bottom 125.651041667%
+        background-image url('~images/sec_1_banner_pad.png')
+      &.sec-2
+        padding-bottom 63.28%
+        background-image url('~images/sec_2_banner_pad.png')
+
+#introduction
+  .secs
+    width 100%
+    .sec
+      width 1960px
+      position relative
+      left 50%
+      margin-left -960px
+      .caption
+        padding-top 135px
+        @media (max-width:768px)
+          display none
+      &.sec-1
+        height 2937px
+        background-image url('~images/sec_1.png')
+        @media (max-width:1280px) and (min-width: 769px)
+          width 1280px
+          height 1918px
+          margin-left -640px
+          background-size 1280px 1918px
+          .caption
+            padding-top 70px
+        @media (max-width:768px)
+          width 100%
+          padding-bottom 481.119791667%
+          height auto
+          margin-left 0
+          left 0
+          background-image url('~images/sec_1_pad.png')
+          background-size contain
+          background-repeat no-repeat
+      &.sec-2
+        height 1773px
+        background-image url('~images/sec_2.png')
+        @media (max-width:1280px) and (min-width: 769px)
+          width 1280px
+          height 1158px
+          margin-left -640px
+          background-size 1280px 1158px
+          .caption
+            padding-top 70px
+        @media (max-width:768px)
+          width 100%
+          padding-bottom 288.411458333%
+          height auto
+          margin-left 0
+          left 0
+          background-image url('~images/sec_2_pad.png')
+          background-size contain
+          background-repeat no-repeat
+
+#feature
+  .secs
+    width 100%
+    padding 110px 20px 110px
+    .maxxis
+      margin-bottom 35px
+    .ny_maxxis
+      margin-top 35px
+    .sec
+      width 50%
+      min-width 640px
+      float left
+      font-size 18px
+      .context
+        line-height 28px
+        width 570px
+        &.arrow::before
+          content url('~images/arrow.png')
+          position relative
+          left 0px
+          top 2px
+          margin 0 5px
+      .h3
+        font-size 24px
+        font-weight bold
+        // margin-top 25px
+      .mb25
+        margin-bottom 25px
+    @media (max-width:768px)
+      .maxxis
+        width 225px
+      .ny_maxxis
+        width 95%
+        max-width 322px
+      .sec
+        font-size 16px
+        width 95%
+        min-width 0
+        // min-width 337px
+        .context
+          // width 100%
+          width auto
+        .h3
+          font-size 20px
+
+#timing    
+
+.quick-links
+  position fixed
+  right 0
+  top 50%
+  margin-top - 350px
+  @media (max-width:768px)
+    display none
+  a
+    width 75px
+    height 236px
+    margin 5px 0
+    display block
+  .home
+    background-image url('~images/quick_home.png')
+  .perserve
+    background-image url('~images/quick_preserve.png')
+  .share
+    background-image url('~images/quick_share.png')
+
+footer
+  background-color #1b1b1b
+  color #fff
+  font-size 16px
+  text-align center
+  padding 30px 0 20px
+  @media (min-width:10px) and (max-width:720px)
+    padding 30px 25px 20px
+    font-size 14px
+    line-height 24px
