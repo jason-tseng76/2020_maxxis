@@ -8,15 +8,33 @@ let nowPage = 'introduction';
 const onResize = () => {
   clearTimeout(resizeDebounce);
   resizeDebounce = setTimeout(() => {
-    const _width = $(window).width();
-    if (_width > 768) $('.kv-image > img').attr('src', 'images/kv.png');
-    if (_width <= 768) $('.kv-image > img').attr('src', 'images/kv_pad.png');
-    // equalCubeHeight();
   }, 200);
 };
 
+const fbShare = (e) => {
+  e.preventDefault();
+
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(process.env.APP_URL)}`;
+  window.open(url, '_blank');
+};
+
+const gotoAnchor = (name) => {
+  if (name !== 'sedan' && name !== 'suv') return;
+  const target = name === 'sedan' ? '.sec-1.t-0' : '.sec-2.t-0';
+  const offset = $(target).offset();
+  $([document.documentElement, document.body]).animate({
+    scrollTop: offset.top,
+  }, 500);
+};
+
+const onPushState = (e) => {
+  const state = e.state || {};
+  if (state.url) gotoAnchor(state.url.replace('#', ''));
+};
+
 $(() => {
-  $('#root').fadeIn();
+  // $('#root').fadeIn();
+  $('#root').show();
 
   const params = {};
   window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value) => {
@@ -37,6 +55,22 @@ $(() => {
   }
 
   $(`#${nowPage}`).show();
+
+  $('a.share').on('click', fbShare);
+
+  window.addEventListener('popstate', onPushState);
+  $('.sec-banner.sec-1').on('click', () => {
+    window.history.pushState({ url: '#sedan' }, null, '#sedan');
+    gotoAnchor('sedan');
+  });
+  $('.sec-banner.sec-2').on('click', () => {
+    window.history.pushState({ url: '#suv' }, null, '#suv');
+    gotoAnchor('suv');
+  });
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    gotoAnchor(hash);
+  }
 
   $(window).on('resize', onResize);
   onResize();

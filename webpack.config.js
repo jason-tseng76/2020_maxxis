@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+let url = 'https://www.hotcar.com.tw/commodity/Tires2020/';
+if (process.env.APP_ENV !== 'production') url = 'https://upbeat-babbage-61c534.netlify.app/';
+
 module.exports = {
   entry: {
     'js/main': './src/main',
@@ -73,6 +76,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env.APP_ENV': JSON.stringify(process.env.APP_ENV),
+      'process.env.APP_URL': JSON.stringify(url),
     }),
     // # 在plugins裡新增路徑與轉出的位置及細節調整
     new HtmlWebpackPlugin({
@@ -98,8 +102,8 @@ module.exports = {
       },
     }),
     new CopyPlugin([
-      { from: 'src/images/kv.png', to: 'assets/kv.png' },
-      { from: 'src/images/kv_pad.png', to: 'assets/kv_pad.png' },
+      // { from: 'src/images/kv.png', to: 'assets/kv.png' },
+      { from: 'src/images/fbshare.jpg', to: 'assets/fbshare.jpg' },
       // { from: 'other', to: 'public' },
     ]),
   ],

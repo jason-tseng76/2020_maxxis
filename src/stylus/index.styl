@@ -147,18 +147,20 @@ nav
   &.sec-1
     height 344px
     background-image url('~images/sec_1_banner.png')
+    cursor pointer
   &.sec-2
     height 344px
     margin-top 15px
     background-image url('~images/sec_2_banner.png')
-  @media (min-width:769) and (max-width:1280px)
+    cursor pointer
+  @media (max-width:1280px) and (min-width:769px)
     &.sec-1
     &.sec-2
       width 1280px
       height 225px
       background-size 1280px 225px
       margin-left -640px
-  @media (max-width:768px)
+  @media (max-width:768px) and (min-width:376px)
     .caption
       display: none
     &.sec-1
@@ -175,74 +177,283 @@ nav
       &.sec-2
         padding-bottom 63.28%
         background-image url('~images/sec_2_banner_pad.png')
+  @media (max-width:375px)
+    .caption
+      display: none
+    &.sec-1
+    &.sec-2
+      width 100%
+      background-size contain
+      background-repeat no-repeat
+      margin-left 0
+      height auto
+      left 0
+      &.sec-1
+        padding-bottom 427.2%
+        background-image url('~images/sec_1_banner_m.png')
+      &.sec-2
+        padding-bottom 225.066666667%
+        background-image url('~images/sec_2_banner_m.png')
 
 #introduction
-  .secs
+  .secs.info
     width 100%
-    .sec
-      width 1960px
+
+    .sec-1
+      width 100%
       position relative
-      left 50%
-      margin-left -960px
-      .caption
-        padding-top 135px
-        @media (max-width:768px)
-          display none
-      &.sec-1
-        height 2937px
-        background-image url('~images/sec_1.png')
-        @media (max-width:1280px) and (min-width: 769px)
-          width 1280px
-          height 1918px
-          margin-left -640px
-          background-size 1280px 1918px
-          .caption
-            padding-top 70px
-        @media (max-width:768px)
-          width 100%
-          padding-bottom 481.119791667%
+      background-position: center
+      background-size cover
+      &.t-0
+        height 849px
+        background-image url('~images/sec_1_t_0.jpg')
+      &.t-1
+        height 521px
+        background-image url('~images/sec_1_t_1.jpg')
+      &.t-2
+        height 521px
+        background-image url('~images/sec_1_t_2.jpg')
+      &.t-3
+        height 521px
+        background-image url('~images/sec_1_t_3.jpg')
+      &.t-4
+        height 521px
+        background-image url('~images/sec_1_t_4.jpg')
+    .sec-2
+      width 100%
+      position relative
+      background-position: center
+      background-size cover
+      &.t-0
+        height 739px
+        background-image url('~images/sec_2_t_0.jpg')
+      &.t-1
+        height 519px
+        background-image url('~images/sec_2_t_1.jpg')
+      &.t-2
+        height 519px
+        background-image url('~images/sec_2_t_2.jpg')
+    @media (max-width:1080px) and (min-width:769)
+      .sec-1
+        &.t-0
+          height 554px
+      .sec-2
+        &.t-0
+          height 483px
+    @media (max-width:768px) and (min-width:376px)
+      .sec-1
+        &.t-0
           height auto
-          margin-left 0
-          left 0
-          background-image url('~images/sec_1_pad.png')
-          background-size contain
-          background-repeat no-repeat
-      &.sec-2
-        height 1773px
-        background-image url('~images/sec_2.png')
-        @media (max-width:1280px) and (min-width: 769px)
-          width 1280px
-          height 1158px
-          margin-left -640px
-          background-size 1280px 1158px
-          .caption
-            padding-top 70px
-        @media (max-width:768px)
-          width 100%
-          padding-bottom 288.411458333%
+          padding-bottom 81.380208333%
+          background-image url('~images/sec_1_t_0_pad.jpg')
+        &.t-1
+          height 768px
+          background-image url('~images/sec_1_t_1_pad.jpg')
+        &.t-2
+          height 798px
+          background-image url('~images/sec_1_t_2_pad.jpg')
+        &.t-3
+          height 761px
+          background-image url('~images/sec_1_t_3_pad.jpg')
+        &.t-4
+          height 756px
+          background-image url('~images/sec_1_t_4_pad.jpg')
+      .sec-2
+        &.t-0
           height auto
-          margin-left 0
+          padding-bottom 81.770833333%
+          background-image url('~images/sec_2_t_0_pad.jpg')
+        &.t-1
+          height 758px
+          background-image url('~images/sec_2_t_1_pad.jpg')
+        &.t-2
+          height 830px
+          background-image url('~images/sec_2_t_2_pad.jpg')
+    @media (max-width: 375px)
+      .sec-1
+        &.t-0
+          height auto
+          padding-bottom 109.333333333%
+          background-image url('~images/sec_1_t_0_m.jpg')
+        &.t-1
+          height 762px
+          background-image url('~images/sec_1_t_1_m.jpg')
+        &.t-2
+          height 890px
+          background-image url('~images/sec_1_t_2_m.jpg')
+        &.t-3
+          height 761px
+          background-image url('~images/sec_1_t_3_m.jpg')
+        &.t-4
+          height 795px
+          background-image url('~images/sec_1_t_4_m.jpg')
+      .sec-2
+        &.t-0
+          height auto
+          padding-bottom 98.9333333%
+          background-image url('~images/sec_2_t_0_m.jpg')
+        &.t-1
+          height 916px
+          background-image url('~images/sec_2_t_1_m.jpg')
+        &.t-2
+          height 878px
+          background-image url('~images/sec_2_t_2_m.jpg')
+    .context
+      position relative
+      width 40%
+      &.t-1
+        left 50%
+        margin-left -30px
+        top 90px
+      &.t-2
+        width 50%
+        margin-left 10%
+        top 90px
+      @media (max-width:1080px) and (min-width:769px)
+        &.t-1
+          top 40px
+        &.t-2
+          top 40px
+      @media (max-width:768px)
+        &.t-1
+        &.t-2
           left 0
-          background-image url('~images/sec_2_pad.png')
-          background-size contain
-          background-repeat no-repeat
+          margin 0 auto
+          width 80%
+          top 50%
+      @media (max-width: 375px)
+        &.t-1
+        &.t-2
+          width 90%
+    .h2
+      font-size 42px
+      font-weight bold
+      .small
+        font-size 36px
+      .small-more
+        font-size 30px
+    .h3
+      font-size 18px
+      position relative
+      margin-left 25px
+      margin-top 25px
+      line-height 26px
+      &.arrow::before
+        content url('~images/arrow.png')
+        position absolute
+        left -25px
+        top 2px
+    @media (max-width: 566px) and (min-width:376px)
+      .h3
+        margin-top 10px
+    @media (max-width: 440px)
+      .h2
+        font-size 36px
+        .small
+          font-size 24px
+        .small-more
+          font-size 24px
+      .h3
+        font-size 16px
+        line-height 24px
+    @media (max-width: 375px)
+      .h2
+        font-size 36px
+        .small
+          font-size 24px
+        .small-more
+          font-size 24px
+      .h3
+        font-size 16px
+        line-height 24px
+
+
+    // .sec
+    //   width 100%
+    //   width 1960px
+    //   position relative
+    //   left 50%
+    //   margin-left -960px
+    //   background-position: center
+    //   .caption
+    //     padding-top 135px
+    //     @media (max-width:768px)
+    //       display none
+
+    //   .h2
+    //     font-size 42px
+    //     font-weight bold
+    //     position absolute
+    //     .small
+    //       font-size 36px
+    //     &.t-1
+    //       left 50%
+    //       margin-left -30px
+    //       top 937px
+    //   &.sec-1
+    //     height 2937px
+    //     background-image url('~images/sec_1.png')
+    //     @media (max-width:1280px) and (min-width: 769px)
+    //       width 1280px
+    //       height 1918px
+    //       margin-left -640px
+    //       background-size 1280px 1918px
+    //       .caption
+    //         padding-top 70px
+    //     @media (max-width:768px)
+    //       width 100%
+    //       padding-bottom 481.119791667%
+    //       height auto
+    //       margin-left 0
+    //       left 0
+    //       background-image url('~images/sec_1_pad.png')
+    //       background-size contain
+    //       background-repeat no-repeat
+    //     @media (max-width:375px)
+    //       padding-bottom 964%
+    //       background-image url('~images/sec_1_m.png')
+    //   &.sec-2
+    //     height 1773px
+    //     background-image url('~images/sec_2.png')
+    //     @media (max-width:1280px) and (min-width: 769px)
+    //       width 1280px
+    //       height 1158px
+    //       margin-left -640px
+    //       background-size 1280px 1158px
+    //       .caption
+    //         padding-top 70px
+    //     @media (max-width:768px)
+    //       width 100%
+    //       padding-bottom 288.411458333%
+    //       height auto
+    //       margin-left 0
+    //       left 0
+    //       background-image url('~images/sec_2_pad.png')
+    //       background-size contain
+    //       background-repeat no-repeat
+    //     @media (max-width:375px)
+    //       padding-bottom 576.533333333%
+    //       background-image url('~images/sec_2_m.png')
 
 #feature
   .secs
-    width 100%
+    width 95%
+    margin 0 auto
     padding 110px 20px 110px
+    @media (max-width:768px)
+      width 100%
     .maxxis
       margin-bottom 35px
     .ny_maxxis
       margin-top 35px
     .sec
       width 50%
-      min-width 640px
+      min-width 500px
       float left
       font-size 18px
       .context
         line-height 28px
-        width 570px
+        width 90%
         &.arrow::before
           content url('~images/arrow.png')
           position relative
@@ -272,7 +483,56 @@ nav
         .h3
           font-size 20px
 
-#timing    
+#timing
+  .secs
+    width 100%
+    max-width 1280px
+    margin 0 auto
+    .timing-caption
+      text-align center
+      font-size 18px
+      margin 65px 0 50px
+      font-weight bold
+      line-height 28px
+    .sec
+      width 50%
+      display inline-block
+      .timing-unit
+        width 442px
+        margin 30px auto
+        img
+          width 100%
+        .h3
+          margin 25px 5px 5px
+          font-size 24px
+          font-weight bold
+          .small
+            display inline-block
+            font-size 20px
+        .text
+          font-size 18px
+          line-height 26px
+          margin 0 5px
+    .maxxis-care
+      text-align center
+      margin 70px 0 100px
+    @media (max-width:1000px) and (min-width:501px)
+      .sec
+        width 100%
+    @media (max-width:500px)
+      .timing-caption
+        font-size 16px
+      .sec
+        width 100%
+        .timing-unit
+          width 90%
+          .h3
+            font-size 20px
+          .text
+            font-size 16px
+      .maxxis-care
+        img
+          width 90%
 
 .quick-links
   position fixed
